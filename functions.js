@@ -40,7 +40,7 @@ function channelHasVideo(videoTitle, channel) {
   //   });
   // });
   // return false;
-  // return channel.videos.some((video) => video.tittle === videoTitle);
+
   return channel.videos.some((video) => video.title === videoTitle);
 }
 
@@ -112,7 +112,6 @@ function totalVideosDuration(channel) {
  * BONUS: use iteration method `.sort()`
  ****************************************************************/
 function channelWithMostContent(channels) {
-  // channels.sort((channelA, channelB) => -5);
   let ch = channels[0];
   channels.forEach((channel) => {
     if (totalVideosDuration(channel) > totalVideosDuration(ch)) ch = channel;
@@ -128,12 +127,6 @@ function channelWithMostContent(channels) {
  * BONUS: use iteration method `.sort()`
  ****************************************************************/
 function longestChannelName(channels) {
-  // let largest = 0;
-  // channel.forEach((e) => {
-  //   if (e.name.length > channel[largest].name) largest = indexOf(e);
-  // });
-  // return channel[largest];
-
   let chL = channels[0];
   channels.forEach((channel) => {
     if (channel.name.length > chL.name.length) chL = channel;
